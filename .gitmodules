@@ -4,3 +4,6 @@
 [submodule "open-source/amazon-kinesis-video-streams-producer-c"]
 	path = open-source/amazon-kinesis-video-streams-producer-c
 	url = https://github.com/awslabs/amazon-kinesis-video-streams-producer-c.git
+[submodule "DIMBULA"]
+	path = DIMBULA
+	url = git@github.com:kunimasu-com/DIMBULA.git
