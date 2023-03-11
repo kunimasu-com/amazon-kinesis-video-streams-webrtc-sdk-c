@@ -341,11 +341,7 @@ install(DIRECTORY ${KINESIS_VIDEO_WEBRTC_CLIENT_SRC}/src/include/
 )
 
 if (BUILD_SAMPLE)
-  # copy sample frames to build folder, in case developer runs sample program with command `samples/kvsWebrtcClientMaster` from `build` dir.
-  file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/samples/opusSampleFrames" DESTINATION .)
-  file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/samples/h264SampleFrames" DESTINATION .)
-
-  add_subdirectory(samples)
+  add_subdirectory(DIMBULA/amazon-kinesis-video-streams-webrtc-sdk-c-samples)
 endif()
 
 if(BUILD_TEST)
@@ -360,4 +356,3 @@ get_directory_property(clean_files ADDITIONAL_CLEAN_FILES)
 list(APPEND clean_files "${OPEN_SRC_INSTALL_PREFIX}")
 list(APPEND clean_files "${CMAKE_CURRENT_SOURCE_DIR}/build")
 set_directory_properties(PROPERTIES ADDITIONAL_CLEAN_FILES "${clean_files}")
-
